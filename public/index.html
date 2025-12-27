@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Example Estates – Chat Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Example Estates – Chat Assistant</h1>
+      <p>Ask us anything about buying, selling or renting a property.</p>
+    </header>
+
+    <main class="main">
+      <section class="chat-container">
+        <div id="chat-window" class="chat-window"></div>
+        <form id="chat-form" class="chat-form">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="Type your question..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="send-btn">Send</button>
+        </form>
+      </section>
+
+      <section class="side-column">
+        <section class="lead-form-container">
+          <h2>Request a callback</h2>
+<p>Leave your details and our team will contact you with suitable options.</p>
+          <form id="lead-form">
+            <label>
+              Name
+              <input type="text" id="lead-name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" id="lead-email" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" id="lead-phone" />
+            </label>
+            <label>
+              What are you looking for?
+              <textarea id="lead-notes" rows="3"></textarea>
+            </label>
+            <button type="submit">Send details</button>
+            <p class="privacy-note">We’ll only use your details to respond to this enquiry.</p>
+            <p id="lead-status" class="lead-status"></p>
+          </form>
+        </section>
+
+        <!-- Simple admin block; you can later hide this behind a password -->
+        <section class="admin-settings">
+  <div class="admin-header">
+    <h3>Billing & AI Settings</h3>
+    <button id="toggle-settings" type="button" class="admin-toggle">Show</button>
+  </div>
+
+  <div id="settings-body" class="settings-body hidden">
+    <p class="admin-note">Paste your OpenAI API key to use your own billing.</p>
+
+    <label>
+      OpenAI API Key
+      <input type="text" id="agent-api-key" placeholder="sk-..." />
+    </label>
+
+    <button id="save-key-btn" type="button">Save API Key</button>
+    <p id="save-status" class="save-status"></p>
+  </div>
+</section>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

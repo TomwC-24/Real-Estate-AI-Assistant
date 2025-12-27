@@ -1,0 +1,279 @@
+/* ---------- GLOBAL ---------- */
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+/* ---------- APP WRAPPER ---------- */
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ---------- HEADER ---------- */
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  margin-top: 6px;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* ---------- CHAT ---------- */
+
+.chat-container {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Chat bubbles */
+
+.bubble {
+  max-width: 75%;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.bubble-user {
+  background: #1e40af;
+  color: #ffffff;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.bubble-assistant {
+  background: #e5e7eb;
+  color: #1f2933;
+  border-bottom-left-radius: 4px;
+}
+
+/* Typing indicator */
+.typing {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* ---------- CHAT INPUT ---------- */
+
+.chat-form {
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.chat-form input:focus {
+  outline: none;
+  border-color: #1e40af;
+}
+
+.chat-form button {
+  background: #1e40af;
+  color: #ffffff;
+  border: none;
+  padding: 0 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chat-form button:hover {
+  opacity: 0.9;
+}
+
+/* ---------- SIDE COLUMN ---------- */
+
+.side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---------- LEAD FORM ---------- */
+
+.lead-form-container {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.lead-form-container h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.lead-form-container p {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.lead-form-container label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.lead-form-container input,
+.lead-form-container textarea {
+  margin-top: 4px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.lead-form-container button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lead-form-container button:hover {
+  opacity: 0.9;
+}
+
+.lead-status.success {
+  margin-top: 8px;
+  color: #16a34a;
+  font-size: 13px;
+}
+
+/* ---------- AGENT SETTINGS ---------- */
+
+.admin-settings {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.admin-settings h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.admin-note {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.admin-settings input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.admin-settings button {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px;
+  background: #4b5563;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.save-status.success {
+  color: #16a34a;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.save-status.error {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.privacy-note {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6b7280;
+}
+/* ---------- Admin Settings Toggle ---------- */
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.admin-toggle {
+  background: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.admin-toggle:hover {
+  opacity: 0.9;
+}
+
+.settings-body.hidden {
+  display: none;
+}
+
